@@ -1,0 +1,107 @@
+module.exports = {
+  root: true,
+  ignorePatterns: [
+    '/public',
+    '/dist',
+    '/old',
+    'tests',
+    'tests/**',
+    'tests/**/*',
+    '**/tests/**/*',
+    '/node_modules',
+    '**/node_modules/**/*',
+  ],
+  env: {
+    node: true,
+    mocha: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    // "plugin:cypress/recommended",
+    // 'plugin:@typescript-eslint/recommended',
+    'standard',
+    'plugin:vue/vue3-recommended',
+    // 'plugin:typescript/recommended',
+    // '@vue/standard',
+    // '@vue/typescript',
+  ],
+  plugins: [
+    // 'typescript',
+    '@typescript-eslint',
+    // 'cypress',
+    'import',
+    'unused-imports',
+    'simple-import-sort',
+
+    // 'eslint-plugin-mad-vue3',
+  ],
+  rules: {
+    indent: ['error', 2],
+    'no-console': 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-var': 'error',
+    'no-unused-vars': 'warn',
+    'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
+    'comma-dangle': ['error', 'always-multiline'],
+    'vue/html-self-closing': ['error', { html: { void: 'never', normal: 'never', component: 'always' } }],
+    'vue/html-indent': 'error',
+    // 'vue/max-attributes-per-line': ['error', { 'singleline': 12, 'multiline': { 'max': 1 } }],
+    'vue/html-closing-bracket-newline': ['off'],
+    'vue/max-attributes-per-line': ['off'],
+    'vue/no-v-html': ['off'],
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/require-prop-types': 'off',
+    'vue/require-default-prop': 'off',
+    camelcase: 'off', // because we work with python backend
+    // "@typescript-eslint/no-unused-vars": "off",
+    'unused-imports/no-unused-imports-ts': 'error',
+    // "unused-imports/no-unused-vars-ts": ["warn", { vars: "all", varsIgnorePattern: "^_", args: "after-used", argsIgnorePattern: "^_" }],
+    // 'no-trailing-spaces': 'off',
+    'dot-notation': 'off',
+    // 'sort-imports': 'warn',
+
+    'vue/no-mutating-props': 'off',
+
+    'sort-imports': 'off',
+    'import/order': 'off',
+    'simple-import-sort/exports': 'warn',
+    // 'simple-import-sort/imports': 'warn',
+    // https://github.com/lydell/eslint-plugin-simple-import-sort/
+    'simple-import-sort/imports': ['warn', { groups: [['^\\u0000', '^@?\\w', '^', '^\\.', '^.+\\.vue$', '^.+\\.s?css$']] }],
+    // '@typescript-eslint/dot-notation': ['error'],
+    // 'mad-vue3/import-component': 'error',
+    // 'mad-vue3/unknown-component': 'error',
+  },
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    extraFileExtensions: ['.vue'],
+  },
+  // overrides: [
+  //   {
+  //     files: [
+  //       'src/**/*.ts',
+  //       'src/**/*.vue',
+  //       '*.js',
+  //       '*.json',
+  //       '*.ts',
+  //       '*.html',
+  //     ],
+  //   },
+  // //   {
+  // //     files: [
+  // //       '**/__tests__/*.{j,t}s?(x)',
+  // //       'tests/unit/**/*.spec.{j,t}s?(x)',
+  // //       'tests/e2e/**/*.ts',
+  // //     ],
+  // //     plugins: [
+  // //       'cypress',
+  // //     ],
+  // //     env: {
+  // //       // 'cypress/globals': true,
+  // //     },
+  // //   },
+  // ],
+}

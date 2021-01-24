@@ -1,0 +1,27 @@
+{
+  "exclude": [
+    "public",
+    "tests",
+    "dist",
+    "node_modules",
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "checkJs": true,
+    "noUnusedLocals": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "lib": ["esnext", "dom"],
+    "isolatedModules": true,
+    "noEmit": true
+  }
+}

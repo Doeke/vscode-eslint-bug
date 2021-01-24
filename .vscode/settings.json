@@ -1,0 +1,40 @@
+{
+  "editor.codeActionsOnSave": {
+    // "source.fixAll": true,
+    "source.organizeImports": false,
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "vue",
+    "typescript",
+    "javascript",
+    "html",
+  ],
+  "vetur.format.enable": false,
+  // "vetur.format.defaultFormatter.ts": "vscode-typescript",
+  "vetur.languageFeatures.codeActions": false,
+  "vetur.validation.script": true,
+  "vetur.validation.template": true,
+  "vetur.experimental.templateInterpolationService": true,
+  // "vetur.validation.templateProps": false,
+  // "vetur.validation.interpolation": true,
+  // "vetur.validation.style": true,
+  // "vetur.completion.autoImport": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.format.semicolons": "remove",
+
+  // "eslint.runtime": "/usr/bin/node",
+
+  "files.exclude": {
+    "node_modules": true
+  },
+  // "eslint.options": {
+  //   "ignorePattern": ["**/node_modules/**/*"],
+  // }
+  // "eslint.format.enable": false,
+  // "editor.formatOnSave": false,
+  // "eslint.codeActionsOnSave.mode": "problems",
+  // "vetur.format.defaultFormatter.js": "none",
+  // "vetur.validation.template": true,
+}
